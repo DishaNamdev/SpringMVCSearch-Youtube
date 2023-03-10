@@ -1,0 +1,20 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+ 
+  <display-name>Archetype Created Web Application</display-name>
+   <!-- Configure dispatcher servlet -->
+  <servlet>
+  		<servlet-name>spring</servlet-name>
+  		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class> <!-- this is front controller -->
+  		<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>spring</servlet-name> <!-- this name should be same as the above servlet name we have wriiten -->
+  	<url-pattern>/</url-pattern> <!-- which url request will dispatchersevlet handle this tag shows this and since we kept "/" here that means we want our servlet to handle all type of request 
+  	but if we put /string then dispatcher will accept only those url which will start with /spring only-->
+  </servlet-mapping>
+</web-app>
